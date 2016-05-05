@@ -17,4 +17,11 @@
         </activity>
     </application>
 
+    <application
+
+        <activity android:name=".Wudhu" >
+
+        </activity>
+    </application>
+
 </manifest>
