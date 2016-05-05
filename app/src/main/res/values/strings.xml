@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AnakMuslim</string>
+    <string name="login">Start</string>
+    <string name="wudhu">Belajar Wudhu</string>
 </resources>
