@@ -1,52 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/background">
 
-    tools:context="com.garudamaya.rendytio.wudhu.Wudhu">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/wudhu_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#088D80"
+        android:elevation="4dp"/>
 
     <ViewFlipper
-        android:layout_width="fill_parent"
-
+        android:layout_width="wrap_content"
         android:id="@+id/viewFlipper"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_margin="30px"
+        android:layout_marginTop="30dp">
 
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/ImageView"
             android:scaleType="centerCrop"
-            android:src="@drawable/wudhu"/>
+            android:src="@drawable/cuci_tangan"
+            android:layout_alignParentTop="true"/>
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/ImageView2"
             android:scaleType="centerCrop"
-            android:src="@drawable/tatacara"/>
+            android:src="@drawable/berkumur"/>
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/ImageView3"
             android:scaleType="centerCrop"
-            android:src="@drawable/images"/>
+            android:src="@drawable/membersihkan_hidung"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImageView4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mencuci_muka"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mencuci_tangan"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mencuci_rambut"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImageView7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/membersihkan_telinga"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mencuci_kaki"/>
+
+
     </ViewFlipper>
-    <Button
-        android:id="@+id/next"
+
+    <ViewFlipper
         android:layout_width="wrap_content"
+        android:id="@+id/contentFlipper"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <Button
-        android:id="@+id/previous"
-        android:layout_width="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_tangan"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_kumur"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_hidung"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_muka" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_lengan"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_rambut"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_telinga" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_kaki"/>
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prev"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/next"/>
-</RelativeLayout>
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previous"
+            android:background="@drawable/previous_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next"
+            android:background="@drawable/next_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="false"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="50dp" />
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/next"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Next"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"/>-->
+    <!--<Button-->
+        <!--android:id="@+id/previous"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Prev"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignTop="@+id/testwe"/>-->
+
+</LinearLayout>
 

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/shalat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#AB47BC"
+        android:elevation="4dp" />
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:id="@+id/viewFlipper"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_margin="30px"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImageView"
+            android:scaleType="center"
+            android:src="@drawable/sikap_awal"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView2"
+            android:scaleType="center"
+            android:src="@drawable/bersedekap"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView3"
+            android:scaleType="center"
+            android:src="@drawable/rukuk"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImageView4"
+            android:scaleType="center"
+            android:src="@drawable/itidal"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView5"
+            android:scaleType="center"
+            android:src="@drawable/sujud_pertama"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView6"
+            android:scaleType="center"
+            android:src="@drawable/duduk_antara_sujud"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView7"
+            android:scaleType="center"
+            android:src="@drawable/sujud_kedua"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView8"
+            android:scaleType="center"
+            android:src="@drawable/tahiyyat_awal"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImageView9"
+            android:scaleType="center"
+            android:src="@drawable/tahiyat_akhir"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ImageView10"
+            android:scaleType="center"
+            android:src="@drawable/salam"/>
+
+
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:id="@+id/contentFlipper"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_niat"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_takbir"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_rukuk"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_itidal" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_sujud_pertama"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_duduk_antara_sujud"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_sujud_kedua" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_tahiyyat_awal"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentView9"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_tahiyyat_akhir" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ContentView10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/description_salam" />/>
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previous"
+            android:background="@drawable/previous_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next"
+            android:background="@drawable/next_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="false"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="50dp" />
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/next"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Next"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentEnd="true"/>-->
+    <!--<Button-->
+    <!--android:id="@+id/previous"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Prev"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignTop="@+id/testwe"/>-->
+
+</LinearLayout>
+

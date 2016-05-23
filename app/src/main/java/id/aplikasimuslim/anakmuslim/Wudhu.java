@@ -1,25 +1,37 @@
 package id.aplikasimuslim.anakmuslim;
 
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ViewFlipper;
 
 public class Wudhu extends AppCompatActivity implements View.OnClickListener{
 
     ViewFlipper viewFlipper;
-    Button next;
-    Button previous;
+    ViewFlipper contentFlipper;
+    ImageButton next;
+    ImageButton previous;
+    Toolbar myToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wudhu);
 
+        myToolbar = (Toolbar) findViewById(R.id.wudhu_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("");
+        myToolbar.setNavigationIcon(R.drawable.wudhu_text);
+
+
         viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
-        next = (Button) findViewById(R.id.next);
-        previous = (Button) findViewById(R.id.previous);
+        contentFlipper = (ViewFlipper)findViewById(R.id.contentFlipper);
+        next = (ImageButton) findViewById(R.id.next);
+        previous = (ImageButton) findViewById(R.id.previous);
 
         next.setOnClickListener(this);
         previous.setOnClickListener(this);
@@ -28,10 +40,12 @@ public class Wudhu extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v){
         if (v == next){
             viewFlipper.showNext();
+            contentFlipper.showNext();
 
         }
         else if (v==previous){
             viewFlipper.showPrevious();
+            contentFlipper.showPrevious();
         }
     }
 }
