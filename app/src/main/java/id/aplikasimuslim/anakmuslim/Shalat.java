@@ -15,17 +15,17 @@ public class Shalat extends AppCompatActivity implements View.OnClickListener{
     ViewFlipper contentFlipper;
     ImageButton next;
     ImageButton previous;
-    Toolbar myToolbar;
+//    Toolbar myToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shalat);
 
-        myToolbar = (Toolbar) findViewById(R.id.shalat_toolbar);
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setTitle("");
-        myToolbar.setNavigationIcon(R.drawable.shalat_text);
+//        myToolbar = (Toolbar) findViewById(R.id.shalat_toolbar);
+//        setSupportActionBar(myToolbar);
+//        getSupportActionBar().setTitle("");
+//        myToolbar.setNavigationIcon(R.drawable.shalat_text);
 
 
         viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);

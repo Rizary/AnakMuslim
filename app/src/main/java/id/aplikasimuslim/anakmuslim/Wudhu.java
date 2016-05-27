@@ -15,17 +15,17 @@ public class Wudhu extends AppCompatActivity implements View.OnClickListener{
     ViewFlipper contentFlipper;
     ImageButton next;
     ImageButton previous;
-    Toolbar myToolbar;
+//    Toolbar myToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wudhu);
 
-        myToolbar = (Toolbar) findViewById(R.id.wudhu_toolbar);
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setTitle("");
-        myToolbar.setNavigationIcon(R.drawable.wudhu_text);
+//        myToolbar = (Toolbar) findViewById(R.id.wudhu_toolbar);
+//        setSupportActionBar(myToolbar);
+//        getSupportActionBar().setTitle("");
+//        myToolbar.setNavigationIcon(R.drawable.wudhu_text);
 
 
         viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);

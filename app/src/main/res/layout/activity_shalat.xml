@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background_shalat"
+    android:weightSum="1">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/shalat_toolbar"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#AB47BC"
-        android:elevation="4dp" />
+        android:layout_height="69dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/textView3"
+        android:layout_weight="0.94" />
 
     <ViewFlipper
         android:layout_width="wrap_content"
@@ -168,7 +170,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
-
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -178,7 +179,7 @@
             android:layout_alignParentRight="false"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="15dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -189,7 +190,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentLeft="false"
             android:layout_marginLeft="190dp"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="15dp" />
     </LinearLayout>
 
     <!--<Button-->
