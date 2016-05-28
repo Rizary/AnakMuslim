@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:orientation="vertical"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background_menu"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="@drawable/background_menu_2"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:weightSum="1">
+    android:weightSum="1" >
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+
 
     <TextView
         android:layout_width="351dp"
@@ -15,28 +18,25 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text=""
         android:id="@+id/textView"
-        android:layout_weight="0.52" />
+        android:layout_weight="0.69" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:id="@+id/wudhu_button"
         android:src="@drawable/button_wudhu"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="-5dp"
-        android:layout_marginLeft="85dp" />
+        android:layout_above="@+id/shalat_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:src="@drawable/button_shalat"
         android:id="@+id/shalat_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="-5dp"
-        android:paddingLeft="-5dp"
-        android:paddingTop="-5dp"
-        android:layout_marginLeft="85dp" />
+        android:layout_marginBottom="88dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/wudhu_button"
+        android:layout_alignStart="@+id/wudhu_button" />
 
-</LinearLayout>
+</RelativeLayout>

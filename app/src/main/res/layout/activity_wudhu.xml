@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -7,70 +7,89 @@
     android:background="@drawable/background_wudhu"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="match_parent"
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/textView2"
-        android:layout_weight="1.04" />
+        android:id="@+id/previous"
+        android:background="@drawable/previous_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:background="@drawable/next_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="15dp" />
 
     <ViewFlipper
         android:layout_width="wrap_content"
         android:id="@+id/viewFlipper"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
-        android:layout_margin="30px"
-        android:layout_marginTop="30dp">
+        android:layout_margin="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerInParent="true">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ImageView"
             android:scaleType="centerCrop"
             android:src="@drawable/cuci_tangan"
-            android:layout_alignParentTop="true"/>
+            android:layout_below="@+id/contentFlipper"
+            android:layout_centerHorizontal="true" />
+
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/ImageView2"
             android:scaleType="centerCrop"
             android:src="@drawable/berkumur"/>
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/ImageView3"
             android:scaleType="centerCrop"
             android:src="@drawable/membersihkan_hidung"/>
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ImageView4"
             android:scaleType="centerCrop"
             android:src="@drawable/mencuci_muka"
             android:layout_alignParentTop="true"/>
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/ImageView5"
             android:scaleType="centerCrop"
             android:src="@drawable/mencuci_tangan"/>
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/ImageView6"
             android:scaleType="centerCrop"
             android:src="@drawable/mencuci_rambut"/>
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ImageView7"
             android:scaleType="centerCrop"
             android:src="@drawable/membersihkan_telinga"
             android:layout_alignParentTop="true"/>
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/ImageView8"
             android:scaleType="centerCrop"
             android:src="@drawable/mencuci_kaki"/>
@@ -82,7 +101,15 @@
         android:layout_width="wrap_content"
         android:id="@+id/contentFlipper"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_below="@id/viewFlipper"
+        android:layout_centerInParent="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentTop="false"
+        android:layout_above="@+id/next">
 
         <ImageView
             android:layout_width="match_parent"
@@ -138,35 +165,6 @@
 
     </ViewFlipper>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/previous"
-            android:background="@drawable/previous_button"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="false"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/next"
-            android:background="@drawable/next_button"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentLeft="false"
-            android:layout_marginLeft="190dp"
-            android:layout_marginTop="15dp" />
-    </LinearLayout>
-
     <!--<Button-->
         <!--android:id="@+id/next"-->
         <!--android:layout_width="wrap_content"-->
@@ -185,5 +183,5 @@
         <!--android:layout_alignParentStart="true"-->
         <!--android:layout_alignTop="@+id/testwe"/>-->
 
-</LinearLayout>
+</RelativeLayout>
 
